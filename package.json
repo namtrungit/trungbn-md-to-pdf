@@ -1,0 +1,48 @@
+{
+  "name": "md-to-pdf-cli",
+  "version": "1.0.0",
+  "description": "Convert Markdown files into beautifully typeset PDFs using headless Chrome.",
+  "type": "module",
+  "bin": {
+    "md2pdf": "src/cli.js"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "example": "node src/cli.js examples/sample.md --toc --page-numbers -d examples/out",
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "markdown",
+    "pdf",
+    "cli",
+    "puppeteer",
+    "converter"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "commander": "^14.0.0",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "puppeteer": "^24.10.0",
+    "tinyglobby": "^0.2.14"
+  }
+}
