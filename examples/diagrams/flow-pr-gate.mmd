@@ -1,0 +1,11 @@
+flowchart TD
+    IN(["PR được mở"]) --> CI["Lớp 0 — CI tự động<br/>Trivy, SAST, gitleaks, test"]
+    CI --> DCI{"Finding<br/>Critical hoặc High?"}
+    DCI -- "Có" --> FIX["Chặn merge, Dev sửa"]
+    FIX --> CI
+    DCI -- "Không" --> AIR["Lớp 1 — AI review<br/>lọc trước"]
+    AIR --> HUM["Lớp 2 — Người review<br/>Checklist mục 3.1 đến 3.6"]
+    HUM --> DHUM{"Reviewer hiểu code<br/>và đồng ý?"}
+    DHUM -- "Không" --> FIX
+    DHUM -- "Đồng ý" --> DOD["Kiểm DoD, mục 3.8"]
+    DOD --> OUT(["Merge"])

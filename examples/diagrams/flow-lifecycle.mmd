@@ -1,0 +1,14 @@
+flowchart TD
+    G1["G1 — Spec và Architecture<br/>Chạy Checklist IP, mục 2"]
+    G1 --> STORY["Chia story, PR dưới 400 dòng"]
+    STORY --> G2["G2 — Dev và agent viết code<br/>gitleaks, lint, type check"]
+    G2 --> G3["G3 — Cổng PR<br/>CI, AI review, người review"]
+    G3 --> D3{"Đạt checklist mục 3<br/>và DoD mục 3.8?"}
+    D3 -- "Không" --> G2
+    D3 -- "Đạt" --> MERGE["Merge"]
+
+    MERGE -- "còn story trong sprint" --> STORY
+    MERGE -.-> G4["G4 — Nightly<br/>image và IaC scan"]
+    G4 -. "tạo ticket" .-> STORY
+
+    MERGE --> G5["G5 — Release<br/>ScanCode.io: SBOM + NOTICE"]

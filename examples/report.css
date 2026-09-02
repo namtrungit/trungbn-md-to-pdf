@@ -1,0 +1,154 @@
+/* Compact internal-report layout: dense tables, tight checklists, printable on A4. */
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+h1 {
+  margin: 0 0 0.3em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #1a1a1a;
+  font-size: 1.9em;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  margin: 1.5em 0 0.5em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #c8ccd1;
+  font-size: 1.3em;
+  color: #0b3d62;
+}
+
+h3 {
+  margin: 1.2em 0 0.35em;
+  border: 0;
+  font-size: 1.05em;
+  color: #14639b;
+}
+
+h4 {
+  margin: 1em 0 0.3em;
+  font-size: 1em;
+}
+
+p,
+ul,
+ol,
+table {
+  margin: 0 0 0.7em;
+}
+
+/* Tables: narrow padding so wide comparison tables still fit the page. */
+table {
+  font-size: 0.87em;
+  break-inside: auto;
+  page-break-inside: auto;
+}
+
+th,
+td {
+  padding: 0.35em 0.55em;
+  border-color: #c8ccd1;
+  vertical-align: top;
+}
+
+thead th {
+  background: #eef2f6;
+  color: #0b3d62;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* Checklists */
+ul,
+ol {
+  padding-left: 1.4em;
+}
+
+li {
+  margin: 0.15em 0;
+}
+
+li + li {
+  margin-top: 0.15em;
+}
+
+.task-list-item {
+  padding-left: 0.1em;
+}
+
+.task-list-item input {
+  margin: 0 0.45em 0 -1.25em;
+}
+
+/* Pre-rendered Mermaid diagrams; sources live in examples/diagrams/*.mmd */
+figure.diagram {
+  margin: 1.1em 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+figure.diagram img {
+  max-height: 195mm;
+  max-width: 100%;
+}
+
+figure.diagram figcaption {
+  margin-top: 0.5em;
+  font-size: 0.85em;
+  color: #5a6672;
+}
+
+blockquote {
+  margin: 0.6em 0;
+  padding: 0.5em 0.9em;
+  background: #f4f7fa;
+  border-left: 3px solid #14639b;
+  font-style: normal;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  background: #eef2f6;
+  font-size: 0.85em;
+}
+
+/* Menlo's wide hyphens make `--format` look like a single em dash, so prefer
+   fonts that keep double dashes visually separate. */
+code,
+kbd,
+samp,
+pre {
+  font-family: Monaco, 'Andale Mono', 'Courier New', monospace;
+  font-variant-ligatures: none;
+}
+
+/* Table of contents */
+.toc {
+  margin: 1.2em 0 1.8em;
+  padding: 0.9em 1.2em;
+  background: #f8fafc;
+  border: 1px solid #c8ccd1;
+  font-size: 0.9em;
+  break-after: page;
+  page-break-after: always;
+}
+
+.toc-title {
+  color: #0b3d62;
+  font-size: 1.05em;
+}
+
+.toc li {
+  margin: 0.1em 0;
+}

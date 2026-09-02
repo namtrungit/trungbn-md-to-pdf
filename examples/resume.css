@@ -1,0 +1,104 @@
+/* Single-page resume layout: small-caps section rules and three-column entries. */
+
+body {
+  font-family: Calibri, Carlito, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.35;
+  color: #000;
+}
+
+/* Header: location — name — contact */
+.cv-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 1.1em;
+}
+
+.cv-name {
+  flex: 1;
+  text-align: center;
+  font-size: 1.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.cv-loc,
+.cv-contact {
+  flex: 0 0 auto;
+  font-size: 0.85em;
+}
+
+/* Section titles */
+h2 {
+  margin: 0.9em 0 0.35em;
+  padding: 0 0 0.1em;
+  border-bottom: 1px solid #000;
+  font-size: 0.95em;
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+h3 {
+  margin: 0.7em 0 0.25em;
+  padding-top: 0.25em;
+  border-top: 1px solid #000;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+h2 + h3 {
+  margin-top: 0.35em;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* Role — organisation — dates */
+.cv-entry {
+  display: flex;
+  align-items: baseline;
+  margin: 0.75em 0 0.2em;
+  font-weight: 700;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.cv-entry > span:first-child {
+  flex: 1 1 0;
+  text-align: left;
+}
+
+.cv-entry > span:nth-child(2) {
+  flex: 0 1 auto;
+  text-align: center;
+}
+
+.cv-entry > span:last-child {
+  flex: 1 1 0;
+  text-align: right;
+}
+
+h2 + .cv-entry {
+  margin-top: 0.3em;
+}
+
+ul {
+  margin: 0 0 0.15em;
+  padding-left: 1.45em;
+}
+
+li {
+  margin: 0;
+  padding-left: 0.15em;
+}
+
+li + li {
+  margin-top: 0.05em;
+}
+
+li::marker {
+  font-size: 0.7em;
+}
