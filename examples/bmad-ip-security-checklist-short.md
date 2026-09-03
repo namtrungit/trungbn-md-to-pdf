@@ -1,6 +1,5 @@
 ---
 title: Checklist IP & Code Review Security cho dự án BMad/SDD
-header: Nội bộ, bản nháp để review
 ---
 
 # Checklist IP & Code Review Security
@@ -9,7 +8,7 @@ Tài liệu chuẩn bị cho việc áp dụng BMad + SDD vào quy trình sản 
 Phạm vi: dự án outsourcing, stack Golang / React-Vite-TypeScript / Ruby on Rails,
 code được sinh một phần bằng AI agent.
 
-Trạng thái: **bản nháp, cần review và bổ sung thông tin hợp đồng.**
+Trạng thái: **review**
 
 ## 1. Năm cổng kiểm soát
 
@@ -146,9 +145,9 @@ quét full dependency tree.
 
 ## 3. Checklist 2 — Code Review và Security
 
-### 3.1 Luật chơi riêng cho code do AI sinh (G1 thiết kế, G3 thi hành)
+### 3.1 Review AI output
 
-- [ ] PR dưới khoảng 400 dòng. Việc này thuộc Scrum Master khi chia story, không phải việc của reviewer
+- [ ] PR khoảng dưới 400 dòng
 - [ ] Reviewer hiểu code mới approve. Không giải thích được thì không merge, dù test đã xanh
 - [ ] AI review là lớp 1, con người là lớp 2. Không để AI approve AI
 - [ ] **Review diff của file test kỹ hơn cả code.** Kiểm tra có assertion nào bị gỡ, có `skip` mới, có mock hết khiến test vô nghĩa. Agent hay sửa test cho pass thay vì sửa bug
@@ -492,37 +491,42 @@ Không có tool sẵn nào làm hai việc này, và cả hai đều rẻ, kho�
 
 ### 5.6 Ghi chú lựa chọn: Trivy và ScanCode
 
-Hai tool này chia nhau theo **độ sâu**, không chồng vai nhau.
+**Trivy** (Aqua Security, Apache-2.0) là scanner bảo mật all-in-one: một binary, không
+cần server. Nó quét CVE trên dependency (đọc `go.sum`, `package-lock.json`, `Gemfile.lock`),
+secret, misconfig IaC, container image, và license **ở mức package** — tức là tin vào
+metadata mà package tự khai. Nó cũng sinh SBOM (CycloneDX / SPDX). Vì vậy Trivy phù hợp
+làm gate CI trên mọi PR (G3) và quét image/IaC ban đêm (G4): đủ nhanh, cover cả ba stack
+trong một lệnh. Điểm yếu: package khai `"license": "MIT"` vẫn có thể chứa thư mục `vendor/`
+có code GPL bên trong, và Trivy không đọc nội dung file nên không thấy.
 
-Trivy làm gate chính ở G3 vì stack có tới ba ngôn ngữ, và nó gộp được CVE, secret, license,
-SBOM vào một lệnh. Nhưng nó đọc **lockfile**, tức là tin vào license mà package tự khai
-trong metadata. Điều đó đủ nhanh để chặn merge nhưng không đủ sâu cho release: một
-package khai `"license": "MIT"` vẫn có thể chứa thư mục `vendor/` có code GPL bên trong,
-và Trivy không thấy.
+**ScanCode** (AboutCode) là bộ công cụ chuyên về **inventory giấy phép và copyright**.
+Hai lớp hay gặp:
 
-ScanCode\.io làm khâu sâu ở G5 vì nó đọc **nội dung từng file** — license text, license
-header, dòng copyright — nên bắt được đúng loại rủi ro của code AI sinh: file copy nguyên
-khối kéo theo license header. Ba việc chỉ nó làm được:
+- **ScanCode Toolkit** — CLI quét nội dung từng file: license text, license header, dòng
+  copyright, package metadata. Đây là lớp bắt được rủi ro của code AI sinh: file copy nguyên
+  khối kéo theo header GPL/AGPL.
+- **ScanCode\.io** — ứng dụng trên Toolkit (Docker + Postgres + web UI): pipeline, policy
+  engine (`policies.yml`), xuất file NOTICE / attribution, SBOM file-level. Đây là thứ
+  tài liệu này chọn cho cổng release (G5).
 
-- **Sinh file NOTICE** bằng `scanpipe output --format attribution`, template Jinja2 sửa được
-- **Policy engine** qua `policies.yml`, khai allowlist và denylist ở mục 4 thành `compliance_alert` mức `error` hoặc `warning`, tức là license policy được thi hành bằng máy chứ không bằng niềm tin
-- **Web UI** để legal hoặc PM tự vào xem, không cần đọc log CI
+ScanCode chậm vì phải đọc và so khớp text từng file, không chỉ lockfile. Đừng đặt trên
+mọi PR. Trivy đã sinh được SBOM bằng `trivy fs --format cyclonedx`, nên **chưa cần dựng
+ScanCode\.io ngay** — chỉ dựng khi tới gần release và cần NOTICE + policy legal.
 
-Đổi lại nó chậm, chạy bằng phút tới giờ, nên đừng đặt ở PR. Vì Trivy đã sinh được SBOM
-bằng `trivy fs --format cyclonedx`, **chưa cần dựng ScanCode\.io ngay** — chỉ dựng khi tới
-gần release đầu tiên.
+| Tiêu chí | Trivy | ScanCode (Toolkit / ScanCode\.io) |
+| --- | --- | --- |
+| Nhà phát triển | Aqua Security | AboutCode (nexB) |
+| License tool | Apache-2.0 | Apache-2.0 (dataset license: CC-BY-4.0) |
+| Việc chính | CVE, secret, IaC, image, license package, SBOM | License + copyright mức file, NOTICE, policy legal |
+| Cách quét | Metadata / lockfile / image layer | Đọc nội dung từng file (text matching) |
+| Độ sâu license | Nông — tin vào field `license` của package | Sâu — thấy header, LICENSE file, code copy kèm giấy phép |
+| Đầu ra | Báo cáo CVE/secret, SBOM CycloneDX/SPDX | SBOM, file NOTICE, web UI, `compliance_alert` |
+| Hạ tầng | Một binary, chạy trong CI | Toolkit: CLI Python. ScanCode\.io: Docker + Postgres |
+| Cổng phù hợp | G3 (mọi PR), G4 (image/IaC) | G5 (gần release) |
+| **Thời gian chạy** | **Giây đến khoảng 1 phút** cho repo app sau khi cache DB CVE. Lần đầu chậm hơn vì tải DB (~vài chục MB đến ~100 MB). Quét image thường **10–60 giây**. | **Phút đến giờ.** Repo nhỏ: vài phút. Repo vừa (vài nghìn file): **10–30+ phút**. Có `node_modules` / `vendor` / monorepo: **hàng giờ**. ScanCode\.io thêm overhead pipeline/DB. |
 
-**ORT đã bị loại.** Nó là orchestrator chứ không phải scanner, và scanner backend nó hay
-dùng chính là ScanCode Toolkit — nên dựng ORT chỉ để gọi ScanCode là thêm một lớp trung
-gian chạy trên JVM, cấu hình bốn bước analyzer → scanner → evaluator → reporter, đường học
-dốc mà không thêm năng lực nào ScanCode\.io chưa có.
-
-Lưu ý phần **dữ liệu** license của ScanCode là CC-BY-4.0, khác với code là Apache-2.0;
-dùng nội bộ thì không sao, nhưng redistribute dataset đó thì cần ghi attribution.
-
-Nhóm SAST ở mục 5.2 là phần bổ sung quan trọng nhất so với một bộ tool chỉ có SCA. SCA
-phát hiện "đang dùng thư viện có CVE hoặc license xấu", nhưng **không phát hiện được lỗi
-bảo mật trong code mà agent vừa viết** — mà đó mới là rủi ro lớn nhất của workflow BMad.
+Quy tắc dùng: **Trivy trên mọi PR; ScanCode chỉ khi chuẩn bị release.** Hai tool không
+thay thế nhau — một cái nhanh và rộng, một cái chậm và sâu về IP.
 
 ### 5.7 Lưu ý về license của chính các tool
 
