@@ -10,7 +10,7 @@ body {
 /* Header: location — name — contact */
 .cv-head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 1em;
   margin-bottom: 1.1em;
@@ -29,6 +29,11 @@ body {
 .cv-contact {
   flex: 0 0 auto;
   font-size: 0.85em;
+}
+
+.cv-contact {
+  text-align: right;
+  line-height: 1.3;
 }
 
 /* Section titles */
