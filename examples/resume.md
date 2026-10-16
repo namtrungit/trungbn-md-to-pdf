@@ -5,7 +5,7 @@ title: Bui Nam Trung — Resume
 <div class="cv-head">
   <span class="cv-loc">Ho Chi Minh City</span>
   <span class="cv-name">Bui Nam Trung</span>
-  <span class="cv-contact">namtrung1810it@gmail.com<br>0784616288</span>
+  <span class="cv-contact">namtrung18101996@gmail.com<br>0784616288<br><a href="https://www.linkedin.com/in/trungbn1810/">linkedin.com/in/trungbn1810</a></span>
 </div>
 
 ## Employment
@@ -49,7 +49,7 @@ title: Bui Nam Trung — Resume
 
 ## Education
 
-<div class="cv-entry"><span>Ho Chi Minh City</span><span>HUTECH University</span><span>Fall 2014 – August 2018</span></div>
+<div class="cv-entry"><span>Ho Chi Minh City</span><span>HUTECH University</span><span>2014 – 2018</span></div>
 
 - Bachelor of Information Technology, GPA: 3.1
 - Undergraduate Coursework: Operating Systems; Databases; Algorithms; Programming Languages; C++, Java, .NET
