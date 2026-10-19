@@ -8,6 +8,27 @@ title: Bui Nam Trung — Resume
   <span class="cv-contact">namtrung18101996@gmail.com<br>0784616288<br><a href="https://www.linkedin.com/in/trungbn1810/">linkedin.com/in/trungbn1810</a></span>
 </div>
 
+## Summary
+
+- Over 8 years of frontend-focused fullstack experience, strongest in React and TypeScript.
+- Strong in reusable UI components and clean, maintainable interfaces with TypeScript, HTML/CSS, Redux, Ant Design, Bootstrap, Material UI, and Tailwind.
+- Also experienced in building APIs and services with Golang and Ruby on Rails.
+- Good English communication skills with solid problem-solving and self-management abilities.
+
+## Languages ,Technologies and Soft skills
+
+- TypeScript, JavaScript, HTML, CSS, Ruby, Golang, C++.
+- ReactJS, Redux Saga, Redux Toolkit, Ant Design, Storybook, Ext JS, Docusaurus, Ruby on Rails, Gin, PostgreSQL, Kafka, Redis, OpenSearch, Docker, Claude Code, Cursor, Neo Vim, Tmux.
+- English skill, Problem solving skill, Critical thinking skill, Self-management skill.
+
+## Technical Experience
+
+### Projects
+
+- **EDI Authority** (2025-Present): A system that receives purchase orders from hospitals and acknowledgements from suppliers, compares each line, and shows differences in price, quantity, unit of measure, and item number. Buyers use one screen to assign these problems and decide how to fix them. (React, TypeScript, Storybook, Docusaurus, Go, Gin, PostgreSQL, Kafka, OpenSearch).
+- **MIMS** (2019-2025): Meperia Implant Management System (MIMS) - a system that automates the bill-only and consignment process, combining both provider and supplier into a single portal. The benefits are item/ pricing transparency, risk mitigation from product recall/ expiration, and visibility to contract items and pricing. (ReactJS, Redux Saga, Antd Design, Ruby on Rails, Golang Elasticsearch).
+- **Market Intelligence** (Aug 2018 – Dec 2018): Support statistical analysis of product prices from suppliers, helping hospitals find the best prices on the market (Ext JS, Ruby on Rails, Elasticsearch).
+
 ## Employment
 
 <div class="cv-entry"><span>Software Engineer</span><span>Bestarion</span><span>2019-Present</span></div>
@@ -20,7 +41,9 @@ title: Bui Nam Trung — Resume
 - Since 2025, I have worked on EDI Authority. The frontend is a React and TypeScript application. I used Storybook to build and review UI components before they go into the app. The backend is a Go service. I built OpenSearch so buyers can search purchase orders and exceptions.
 - Worked on the user interface and the API, and helped new interns learn the project.
 - Wrote a documentation site with Docusaurus for the EDI Authority system. It explains the architecture and how to build and test features, so developers, business analysts, and testers can read the same guide. The site runs with Docker and nginx, and can export pages to PDF.
-- Researched an AI-driven development process (AI-DLC) and applied it to the EDI Authority project. AI drafts the solution, design, code, and review. People check and approve each step before the work moves on.
+- Used Claude Code and Cursor in an AI-assisted development lifecycle on EDI Authority. The assistant drafts the solution, design, code, and review. People check and approve each step before the work continues.
+- Researched an AI-driven development process (AI-DLC) and applied it to the EDI Authority project. AI drafts the 
+solution, design, code, and review. People check and approve each step before the work moves on.
 - Joined technical discussions with the team and gave product demos to customers.
 
 <div class="cv-entry"><span>Software Engineer, Intern</span><span>Larion</span><span>Aug 2018 – Dec 2018</span></div>
@@ -33,19 +56,7 @@ title: Bui Nam Trung — Resume
 - Write API with Ruby on Rails.
 - Use Elasticsearch to store data and show insights.
 
-## Technical Experience
 
-### Projects
-
-- **EDI Authority** (2025-Present): A system that receives purchase orders from hospitals and acknowledgements from suppliers, compares each line, and shows differences in price, quantity, unit of measure, and item number. Buyers use one screen to assign these problems and decide how to fix them. (React, TypeScript, Storybook, Docusaurus, Go, Gin, PostgreSQL, Kafka, OpenSearch).
-- **MIMS** (2019-2025): Meperia Implant Management System (MIMS) - a system that automates the bill-only and consignment process, combining both provider and supplier into a single portal. The benefits are item/ pricing transparency, risk mitigation from product recall/ expiration, and visibility to contract items and pricing. (ReactJS, Redux Saga, Antd Design, Ruby on Rails, Golang Elasticsearch).
-- **Market Intelligence** (Aug 2018 – Dec 2018): Support statistical analysis of product prices from suppliers, helping hospitals find the best prices on the market (Ext JS, Ruby on Rails, Elasticsearch).
-
-### Languages ,Technologies and Soft skills
-
-- JavaScript, TypeScript, HTML, CSS, Ruby, Golang, C++.
-- ReactJS, React Native, Redux, Redux Toolkit, Ant Design, Storybook, Ext JS, Docusaurus, Ruby on Rails, Gin, PostgreSQL, Kafka, Redis, Elasticsearch, OpenSearch, Docker, Neo Vim, Tmux.
-- English skill, Problem solving skill, Critical thinking skill, Self-management skill.
 
 ## Education
 
