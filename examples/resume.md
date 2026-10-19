@@ -20,7 +20,7 @@ title: Bui Nam Trung — Resume
 ## Languages ,Technologies and Soft skills
 
 - TypeScript, JavaScript, HTML, CSS, Ruby, Golang, C++.
-- ReactJS, Redux Saga, Redux Toolkit, Ant Design, Storybook, Ext JS, Docusaurus, Ruby on Rails, Gin, PostgreSQL, Kafka, Redis, OpenSearch, Docker, Claude Code, Cursor, Neo Vim, Tmux.
+- ReactJS, Redux Saga, Redux Toolkit, Ant Design, Storybook, Ext JS, Docusaurus, Ruby on Rails, PostgreSQL, MySQL, Kafka, Redis, OpenSearch, Docker, Claude Code, Cursor, Neo Vim.
 - English skill, Problem solving skill, Critical thinking skill, Self-management skill.
 
 ## Technical Experience
