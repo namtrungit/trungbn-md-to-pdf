@@ -5,7 +5,7 @@ title: Bui Nam Trung — Resume
 <div class="cv-head">
   <span class="cv-loc">Ho Chi Minh City</span>
   <span class="cv-name">Bui Nam Trung</span>
-  <span class="cv-contact">namtrung18101996@gmail.com<br>0784616288<br><a href="https://www.linkedin.com/in/trungbn1810/">linkedin.com/in/trungbn1810</a></span>
+  <span class="cv-contact">namtrung1810dev@gmail.com<br>0784616288<br><a href="https://www.linkedin.com/in/trungbn1810/">linkedin.com/in/trungbn1810</a></span>
 </div>
 
 ## Summary
