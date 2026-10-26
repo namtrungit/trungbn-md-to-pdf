@@ -8,15 +8,17 @@ Trước buổi phỏng vấn, đọc lại resume một lượt. Chuẩn bị n
 
 ### 1. Tell me about yourself.
 
-I am Trung. I am a software engineer in Ho Chi Minh City. I have worked for more than eight years. I am strongest in React and TypeScript. I also build APIs with Go and Ruby on Rails. Now I work on a hospital purchasing system. Before that, I built a portal for hospitals and suppliers. I like clear screens, clean code, and I check my work before release.
+My name is Trung. I'm a software engineer. I have more than eight years experience. I'm strongest in React and TypeScript. I also build APIs with Go and Ruby on Rails. I have been developing Meperia application, a supply chain system for medical items in the USA.
 
 ### 2. Walk me through your resume.
 
-From 2018 to the end of 2018, I was an intern. I built screens with Ext JS and APIs with Ruby on Rails. From 2019 to 2025, I worked on MIMS. Hospitals and suppliers use one website to manage implant items, prices, and stock. I built the React screens, the database, and the Rails APIs. Since 2025, I have worked on EDI Authority. Hospitals send purchase orders. Suppliers send replies. I built the React screen and the Go API, so buyers can see price and quantity differences.
+- In 2018, I worked on Market Intelligence, an insight module that helps hospitals find the best price each vendor offers for an item. I built it with Ext JS, Ruby on Rails, and Elasticsearch.
+- From 2019 to 2025, I worked on MIMS, a web application where hospitals and suppliers manage implant items, prices, and stock. I used ReactJS, Ruby on Rails, and Golang to implement this application. 
+- Since 2025, I have worked on EDI Authority, a system that helps hospitals manage buying and paying for medical supplies. I built the React screen and the Go API.
 
 ### 3. Why are you looking for a new job?
 
-I have learned a lot in my current job. Now I want a new team and a new product. I want to use English more at work. I also want to grow from writing features to helping with design and reviews.
+I have learned a lot from my current job. Now I want a new workplace, a new field, and more chances to use English. Until now, I have only worked in healthcare domain. At my current company, software engineers do not use English often. I mainly use it in client demos and technical discussions.
 
 ### 4. Why do you want this job?
 
@@ -24,11 +26,11 @@ The role matches my experience. I have built React screens and backend APIs for 
 
 ### 5. What are you good at?
 
-I am good at React and TypeScript. I break a big screen into small parts, and I test them. I also read the requirement carefully. If something is not clear, I ask early.
+In my projects, my role is Front-end Developer. I help with the UI and the user experience recommendations, and I can do backend tasks if the team needs me. If a requirement is not clear, I ask early. I always try to write code that is easy to read, understand, and maintain. For me, responsibility and clear communication come first, and the team works together to make the best product for the client.
 
 ### 6. What is a weak point?
 
-I sometimes spend too long making the code clean. Now I set a time limit. I finish the useful version first, then I clean the important parts only.
+I have two weak points. First, I find it harder to focus when working from home because my home can be noisy. That is why I prefer working in the office or in a hybrid setup. Second, I sometimes stutter, especially when I feel stressed or excited. I have practiced a lot to improve it, and now I can usually control it. When it happens, I slow down and take a short pause.
 
 ### 7. Tell me about your current project.
 
@@ -40,7 +42,7 @@ I work on EDI Authority. A hospital sends an order. A supplier sends a reply. My
 
 ### 8. How do you work with other people?
 
-I work with business analysts, testers, and other developers. First we agree on the requirement. Then I estimate the work. When I finish, I show the result and I listen to feedback. I also gave product demos to customers.
+I work in Agile Scrum with business analysts, testers, and other developers. In each sprint, we agree on the requirement first. Then I estimate the work. When I finish, I show the result and listen to feedback. I am always open to ideas and feedback from other people. I like working in a close team where we share and build ideas together.
 
 ### 9. Tell me about a problem at work.
 
@@ -60,7 +62,7 @@ I can talk about my work in simple English. I sometimes need a slow speaker, or 
 
 ### 13. When can you start?
 
-I need time to hand over my current work. I think I need about one month. I can confirm the date after I speak with my manager.
+I need time to hand over my current work. I normally need about one month, but the earliest I could start is 15 days after accepting the offer. I can confirm the date after I speak with my manager.
 
 Đổi "one month" nếu công ty hiện tại yêu cầu thời gian khác.
 
@@ -72,7 +74,16 @@ Nói số chỉ khi họ hỏi lại lần hai. Chuẩn bị một số trước
 
 ### 15. Do you have questions for us?
 
-Yes. What does the team expect in the first three months? In the work sample, what do you want to see: clean code, a working feature, or both? Will the second interview be about my sample?
+Yes. I have a few questions:
+
+- What does the team expect from me in the first three months?
+- How is the team organized, and who will I work with every day?
+- How would you describe the team culture?
+- What kind of task or project would I work on first?
+- How often does the team use English at work?
+- What is the biggest challenge the team is working on now?
+- In the work sample, what do you want to see: clean code, a working feature, or both?
+- Will the second interview be about my work sample?
 
 ## Cách nói khi bí từ
 
