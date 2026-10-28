@@ -12,7 +12,7 @@ My name is Trung. I'm a software engineer. I have more than eight years experien
 
 ### 2. Walk me through your resume.
 
-- In 2018, I worked on Market Intelligence, an insight module that helps hospitals find the best price each vendor offers for an item. I built it with Ext JS, Ruby on Rails, and Elasticsearch.
+- In 2018, I worked on Market Intelligence. It helps hospitals find the best price from each vendor for one item. I used Ext JS, Ruby on Rails, and Elasticsearch.
 - From 2019 to 2025, I worked on MIMS, a web application where hospitals and suppliers manage implant items, prices, and stock. I used ReactJS, Ruby on Rails, and Golang to implement this application. 
 - Since 2025, I have worked on EDI Authority, a system that helps hospitals manage buying and paying for medical supplies. I built the React screen and the Go API.
 
@@ -22,11 +22,13 @@ I have learned a lot from my current job. Now I want a new workplace, a new fiel
 
 ### 4. Why do you want this job?
 
-The role matches my experience. I have built React screens and backend APIs for real users. I also like the interview process, because the second round uses a work sample. I can show how I work, not only talk about it.
+- The role matches my experience. I have built React screens and backend APIs for real users. 
+- I really like how the company supports career growth with a clear, step-by-step roadmap for everyone.
+- I like the slogan "Better systems, better world".
 
 ### 5. What are you good at?
 
-In my projects, my role is Front-end Developer. I help with the UI and the user experience recommendations, and I can do backend tasks if the team needs me. If a requirement is not clear, I ask early. I always try to write code that is easy to read, understand, and maintain. For me, responsibility and clear communication come first, and the team works together to make the best product for the client.
+My main strength is front-end work: UI, user experience, and React with TypeScript. I can also take backend tasks when the team needs help. When I work, I ask early if a requirement is not clear, and I try to write code that is easy to read, understand, and maintain. I take responsibility, communicate clearly, and work with the team to deliver a good product for the client.
 
 ### 6. What is a weak point?
 
