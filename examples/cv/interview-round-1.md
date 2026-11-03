@@ -28,7 +28,7 @@ I have learned a lot from my current job. Now I want a new workplace, a new fiel
 
 ### 5. What are you good at?
 
-My main strength is front-end work: UI, user experience, and React with TypeScript. I can also take backend tasks when the team needs help. When I work, I ask early if a requirement is not clear, and I try to write code that is easy to read, understand, and maintain. I take responsibility, communicate clearly, and work with the team to deliver a good product for the client.
+My main strength is front-end work: build UI, recommend user experience, and React with TypeScript. I can also take backend tasks when the team needs help. When I work, I ask early if a requirement is not clear, and I try to write code that is easy to read, understand, and maintain. I take responsibility, communicate clearly, and work with the team to deliver a good product for the client.
 
 ### 6. What is a weak point?
 
@@ -80,7 +80,7 @@ Yes. I have a few questions:
 
 - What does the team expect from me in the first three months?
 - How is the team organized, and who will I work with every day?
-- How would you describe the team culture?
+- How would you describe the company culture?
 - What kind of task or project would I work on first?
 - How often does the team use English at work?
 - What is the biggest challenge the team is working on now?
