@@ -32,12 +32,15 @@ func greet(name string) string {
 
 ---
 
-### Ngày 2 — Struct + Interface
+### Ngày 2 — Struct + Interface + Pointer
 **Học:**
+- **Pointer cơ bản:** `&` (lấy địa chỉ) và `*` (lấy giá trị tại địa chỉ)
 - Struct (thay class trong Ruby)
 - Method trên struct
-- Interface — Go dùng implicit implementation (không cần `implements`)
 - Pointer receiver vs value receiver
+  - Pointer receiver `(*Type)` — khi muốn modify struct
+  - Value receiver `(Type)` — khi chỉ đọc
+- Interface — Go dùng implicit implementation (không cần `implements`)
 
 ```go
 type PurchaseOrder struct {
